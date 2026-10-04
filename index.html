@@ -1,7 +1,335 @@
-<h1>Hello</h1>
-<h2>My name is Krishna</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fisherman's World</title>
 
-<p>I want to become an Frontend</p>
-<p>My favourite video:</p>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8wu6s2HPrHc?si=88bCVVY_m4n3PTBt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    body {
+      background: #eef8f8;
+      color: #12343b;
+    }
+
+    header {
+      background: linear-gradient(135deg, #006994, #003f5c);
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd166;
+    }
+
+    .hero {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 50px 20px;
+
+      background:
+        linear-gradient(rgba(0, 60, 90, .65), rgba(0, 40, 60, .75)),
+        url("https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #ffd166;
+      color: #12343b;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 8%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 34px;
+      color: #005b7a;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    }
+
+    .card .icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #006994;
+    }
+
+    .form-section {
+      background: #d9f0f2;
+    }
+
+    form {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #bbb;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 7px;
+      background: #006994;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004c6d;
+    }
+
+    footer {
+      background: #003f5c;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🎣 Fisherman's World</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book Trip</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome Fishermen 🎣</h1>
+      <p>Experience the thrill of fishing and explore the beauty of the ocean.</p>
+      <a href="#booking" class="btn">Book a Fishing Trip</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2 class="title">Our Fishing Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🚤</div>
+        <h3>Boat Fishing</h3>
+        <p>Enjoy an exciting fishing trip with our comfortable fishing boats.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎣</div>
+        <h3>Deep Sea Fishing</h3>
+        <p>Go deep into the sea and experience professional fishing adventures.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌊</div>
+        <h3>Coastal Fishing</h3>
+        <p>Relax and fish along beautiful coastal locations with expert guides.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="form-section" id="booking">
+    <h2 class="title">Book Your Fishing Trip</h2>
+
+    <form onsubmit="bookTrip(event)">
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Fishing Date</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Fishing Type</label>
+
+        <select id="service" required>
+          <option value="">Select fishing type</option>
+          <option>Boat Fishing</option>
+          <option>Deep Sea Fishing</option>
+          <option>Coastal Fishing</option>
+          <option>Family Fishing</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="people">Number of People</label>
+        <input type="number" id="people" min="1" max="20"
+               placeholder="Number of people" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Additional Message</label>
+        <textarea id="message"
+          placeholder="Tell us anything we should know..."></textarea>
+      </div>
+
+      <button type="submit">🎣 Submit Booking</button>
+
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="title">Contact Us</h2>
+
+    <div style="text-align:center;">
+      <p>📞 Phone: +91 98765 43210</p>
+      <p>📧 Email: fishing@example.com</p>
+      <p>📍 Location: Coastal Fishing Harbor</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Fisherman's World | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function bookTrip(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+
+      alert(
+        "Thank you, " + name +
+        "! 🎣 Your fishing trip booking has been submitted."
+      );
+
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>
